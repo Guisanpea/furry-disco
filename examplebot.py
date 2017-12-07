@@ -9,14 +9,18 @@ logger = logging.getLogger(__name__)
 
 
 def start(bot, update):
-    update.message.reply_text('`me gustan las batadases y las DATA ESTRUCTURAS`')
+    chat_id = update.message.chat_id
+    text = '`me gustan las batadases y las DATA ESTRUCTURAS`'
+    bot.send_message(chat_id, text, parse_mode='Markdown')
 
 
 def main():
+    start_handler = CommandHandler("start", start)
+
     updater = Updater(sys.argv[1])
     dispatcher = updater.dispatcher
 
-    dispatcher.add_handler(CommandHandler("start", start))
+    dispatcher.add_handler(start_handler)
 
     updater.start_polling()
 
