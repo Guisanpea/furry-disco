@@ -15,8 +15,8 @@ class BotActions:
     @staticmethod
     def send_memiyos(bot, update):
         chat_id = update.message.chat_id
-        meme = open(BotActions.random_file_name('/home/archie/Images'), 'rb')
-        bot.send_document(document=meme, chat_id=chat_id, timeout=5000)
+        meme = open(BotActions.random_file_name('/home/archie/Images/memiyos'), 'rb')
+        bot.send_photo(photo=meme, chat_id=chat_id, timeout=5000)
 
     @staticmethod
     def random_file_name(path):
