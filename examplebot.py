@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 def main():
     updater = Updater(sys.argv[1])
     dispatcher = updater.dispatcher
+    logging.basicConfig(file="debug.log", level=logging.DEBUG)
 
     add_handlers(dispatcher)
 
