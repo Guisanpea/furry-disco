@@ -5,12 +5,12 @@ from much_good.bot_actions import BotActions
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
-logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                    filename="debug.log", level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 
 def main():
+    logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                        filename="debug.log", level=logging.DEBUG)
     updater = Updater(sys.argv[1])
     dispatcher = updater.dispatcher
 
