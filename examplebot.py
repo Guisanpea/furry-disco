@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 
 def start(bot, update):
-    update.message.reply_text('```me gustan las batadases y las DATA ESTRUCTURAS```')
+    update.message.reply_text('`me gustan las batadases y las DATA ESTRUCTURAS`')
 
 
 def main():
