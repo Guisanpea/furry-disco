@@ -21,6 +21,7 @@ def main():
 
 def add_handlers(dispatcher):
     dispatcher.add_handler(CommandHandler("start", BotActions.start))
+    dispatcher.add_handler(CommandHandler("send_memiyos", BotActions.send_memiyos))
 
 
 if __name__ == '__main__':
