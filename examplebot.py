@@ -24,6 +24,12 @@ def add_handlers(dispatcher):
     dispatcher.add_handler(CommandHandler("start", BotActions.start))
     dispatcher.add_handler(CommandHandler("send_memiyos", BotActions.send_memiyos))
 
+    dispatcher.add_error_handler(error)
+
+
+def error(bot, update, error):
+    logger.warning('Update "%s" caused error "%s"', update, error)
+
 
 if __name__ == '__main__':
     main()
