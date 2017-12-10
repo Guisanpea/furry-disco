@@ -26,10 +26,14 @@ class BotActions:
     @staticmethod
     def gcd(bot, update, args):
         chat_id = update.message.chat_id
-        a = args[0]
-        b = args[1]
-        bot.send_message(chat_id, compute_gcd(a, b))
+        try:
+            a = int(args[0])
+            b = int(args[1])
+            message = "El mcd de " + str(a) + " y " + str(b) + " es " + str(BotActions.compute_gcd(a, b))
+            bot.send_message(chat_id, message)
+        except Exception:
+            bot.send_message(chat_id, "Illo, ya las liao")
 
     @staticmethod
     def compute_gcd(a, b):
-        return a if b == 0 else mcd(a, a % b)
+        return a if b == 0 else BotActions.compute_gcd(a, a % b)
