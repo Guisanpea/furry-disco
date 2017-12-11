@@ -1,7 +1,7 @@
 from telegram.ext import Updater, CommandHandler
 import logging
 import sys
-from much_good.bot_actions import BotActions
+from much_good.BotActions import BotActions
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     filename="debug.log", level=logging.DEBUG)
