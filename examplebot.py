@@ -1,7 +1,7 @@
 from telegram.ext import Updater, CommandHandler
 import logging
 import sys
-from much_good.BotActions import BotActions
+from much_good import bot_actions
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     filename="debug.log", level=logging.DEBUG)
@@ -19,10 +19,10 @@ def main():
 
 
 def add_handlers(dispatcher):
-    dispatcher.add_handler(CommandHandler("start", BotActions.start))
-    dispatcher.add_handler(CommandHandler("send_memiyos", BotActions.send_memiyos))
-    dispatcher.add_handler(CommandHandler("gcd", BotActions.gcd, pass_args=True))
-    dispatcher.add_handler(CommandHandler("mcd", BotActions.gcd, pass_args=True))
+    dispatcher.add_handler(CommandHandler("start", bot_actions.start))
+    dispatcher.add_handler(CommandHandler("send_memiyos", bot_actions.send_memiyos))
+    dispatcher.add_handler(CommandHandler("gcd", bot_actions.gcd, pass_args=True))
+    dispatcher.add_handler(CommandHandler("mcd", bot_actions.gcd, pass_args=True))
 
     dispatcher.add_error_handler(error)
 

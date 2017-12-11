@@ -1,4 +1,4 @@
-from much_good import Helpers
+from much_good import helpers
 
 
 def start(bot, update):
@@ -9,7 +9,7 @@ def start(bot, update):
 
 def send_memiyos(bot, update):
         chat_id = update.message.chat_id
-        meme = open(Helpers.random_file_name('/home/archie/Images/memiyos'), 'rb')
+        meme = open(helpers.random_file_name('/home/archie/Images/memiyos'), 'rb')
         bot.send_photo(photo=meme, chat_id=chat_id)
 
 
@@ -18,7 +18,7 @@ def gcd(bot, update, args):
     try:
         a = int(args[0])
         b = int(args[1])
-        message = "El mcd de " + str(a) + " y " + str(b) + " es " + str(Helpers.compute_gcd(a, b))
+        message = "El mcd de " + str(a) + " y " + str(b) + " es " + str(helpers.compute_gcd(a, b))
         bot.send_message(chat_id, message)
     except Exception:
         bot.send_message(chat_id, "Illo, ya las liao")
