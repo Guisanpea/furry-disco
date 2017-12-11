@@ -21,6 +21,7 @@ def main():
 def add_handlers(dispatcher):
     dispatcher.add_handler(CommandHandler("start", bot_actions.start))
     dispatcher.add_handler(CommandHandler("send_memiyos", bot_actions.send_memiyos))
+    dispatcher.add_handler(CommandHandler("help", bot_actions.show_help))
     dispatcher.add_handler(CommandHandler("gcd", bot_actions.gcd, pass_args=True))
     dispatcher.add_handler(CommandHandler("mcd", bot_actions.gcd, pass_args=True))
 

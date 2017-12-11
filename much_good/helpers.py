@@ -5,7 +5,7 @@ from random import randint
 
 
 def compute_gcd(a, b):
-    return a if b == 0 else compute_gcd(a, a % b)
+    return a if b == 0 else compute_gcd(b, a % b)
 
 
 def random_file_name(path):

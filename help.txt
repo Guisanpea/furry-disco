@@ -1,0 +1,6 @@
+¡Hola! Estas son las opciones que actualmente tiene mi bot:
+
+`/start`: Recibes un cordial saludo
+`/send_memiyos`: Recibes un meme aleatorio
+`/mcd (num1) (num2)`: Devuelve el mcd de los argumentos
+`/help`: Creo que jamás adivinarás el objetivo de este comando
